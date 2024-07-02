@@ -1,0 +1,7 @@
+services:
+  memefreak:
+    build: .
+    command: python main.py
+    volumes:
+      - .:/app
+    stop_signal: SIGINT
