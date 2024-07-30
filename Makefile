@@ -1,3 +1,7 @@
+
+aider-shell:
+	docker-compose exec aider bash
+
 build:
 	docker-compose build
 
@@ -9,3 +13,6 @@ remove-volumes:
 
 up:
 	docker-compose up
+
+shell:
+	docker-compose run --rm memefreak bash

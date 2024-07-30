@@ -2,6 +2,16 @@ services:
   memefreak:
     build: .
     command: python main.py
+    env_file: .env
     volumes:
       - .:/app
     stop_signal: SIGINT
+
+  aider:
+    image: paulgauthier/aider
+    env_file: .env
+    volumes:
+      - .:/app
+    privileged: true
+    tty: true
+    stdin_open: true
